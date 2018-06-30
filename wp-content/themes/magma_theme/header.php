@@ -61,49 +61,59 @@
 
 				<!--.shell-item-->
 				<div class="shell-item">
-					
-					<!--.item-->
-					<div class="item">
-						<div class="logo">
-							<a href="<?php echo home_url('/'); ?>">
-								<?php if( get_field('head_logo', 'option') ) { 
-									echo '<img src="'.get_field('head_logo', 'option').'" alt="">';
-								} else {
-									echo '<img src="'.get_template_directory_uri().'/img/logo.png" alt="">';
-								} ?>
-							</a>
-						</div>
-						<!--.hamburger--> 
-						<div class="hamburger">
-							<span></span>
-						</div><!--End .hamburger-->
-					</div><!--End .item-->
+                    <div class="shell-item-inner-wrap">
+                        <!--.item-->
+                        <div class="item">
+                            <div class="logo">
+                                <a href="<?php echo home_url('/'); ?>">
+                                    <?php if( get_field('head_logo', 'option') ) {
+                                        echo '<img src="'.get_field('head_logo', 'option').'" alt="">';
+                                    } else {
+                                        echo '<img src="'.get_template_directory_uri().'/img/logo.png" alt="">';
+                                    } ?>
+                                </a>
+                                <span class="logo-text">Изделия из натурального и кварцевого камня</span>
+                            </div>
+                            <!--.hamburger-->
+                            <div class="hamburger">
+                                <span></span>
+                            </div><!--End .hamburger-->
+                        </div><!--End .item-->
 
-					<!--.item-->
-					<div class="item">
-						<nav class="menu-top">
-							<?php
-								wp_nav_menu( array(
-								'theme_location'  => 'primary',
-								'menu'            => 'primary', 
-								'container'       => false, 
-								'menu_class'      => '', 
-								'fallback_cb'     => '__return_empty_string',
-								//'depth'           => 1,
-							  ) );
-							?>
-						</nav>
-					</div><!--End .item-->
+                        <!--.item-->
+                        <div class="item">
+                            <nav class="menu-top">
+                                <?php
+                                wp_nav_menu( array(
+                                    'theme_location'  => 'primary',
+                                    'menu'            => 'primary',
+                                    'container'       => false,
+                                    'menu_class'      => '',
+                                    'fallback_cb'     => '__return_empty_string',
+                                    //'depth'           => 1,
+                                ) );
+                                ?>
+                            </nav>
+                        </div><!--End .item-->
 
-					<!--.item-->
-					<div class="item">
-						<form action="<?php echo home_url('/'); ?>">
+                        <!--.item-->
+                        <div class="item">
+                            <div class="item-header-phones">
+                                <img src="<?= get_template_directory_uri(); ?>/img/header_phone.png">
+                                <div class="header-phones">
+                                    <span class="header-phone">8 (495) 226-28-73</span>
+                                    <span class="header-phone">8 (905) 723 34 45</span>
+                                </div>
+                            </div>
+                            <!--<form action="<?php /*echo home_url('/'); */?>">
 							<div class="form-group">
 								<input type="search" id="s" name="s" placeholder="Поиск" style="padding: 8px 45px 8px 15px;">
 								<input type="submit" name="" style="right: 13px; top: 8px;">
 							</div>
-						</form>
-					</div><!--End .item-->
+						</form>-->
+                        </div><!--End .item-->
+                    </div>
+
 
 				</div><!--End.shell-item-->
 
