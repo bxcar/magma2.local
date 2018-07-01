@@ -19,22 +19,23 @@
 	?>
 	<section class="slider-main-page" id="slider-main-page">
 
+
 		<?php while( $slider->have_posts() ) : $slider->the_post(); ?>
 
 			<div class="item">
 				<div class="slide" style="background-image: url(<?php echo get_field('bg_slider'); ?>)">
 					<div class="slide-description">
 						<h1><?php the_title(); ?></h1>
-						<div class="pre-title">
+						<div class="pre-title" style="display: none;">
 							<?php the_content(); ?>
 						</div>
-						<?php if( get_field('link_slider') ) { echo '<a href="'.get_field('link_slider').'" class="btn">открыть каталог</a>'; } ?>
+						<?php if( get_field('link_slider') ) { echo '<a href="'.get_field('link_slider').'" class="btn-new">В каталог</a>'; } ?>
 					</div>
 				</div>
 			</div>
 
-		<?php 
-			endwhile; 
+		<?php
+			endwhile;
 			wp_reset_query();
 		?>
 		

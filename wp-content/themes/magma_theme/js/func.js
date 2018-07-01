@@ -9,7 +9,7 @@ $(document).ready(function() {
 		slidesToShow: 1,
 		adaptiveHeight: true,
 		speed:1700,
-	  autoplay:true
+	  autoplay:false
 	});
 
 	if(window.matchMedia('(min-width: 768px)').matches){
