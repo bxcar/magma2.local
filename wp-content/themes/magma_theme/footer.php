@@ -1,20 +1,20 @@
 	<footer class="footer">
-		<div class="top-panel">
+		<!--<div class="top-panel">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-5 col-md-4 col-sm-4"><div class="title">бесплатные консультации</div></div>
 					<div class="col-lg-4 col-md-4 col-sm-4">
-						<?php if( get_field('consult_tel', 'option') ) { echo '<a href="tell:'.get_field('consult_tel', 'option').'" class="footer-contact">'.get_field('consult_tel', 'option').'</a>'; } ?>
+						<?php /*if( get_field('consult_tel', 'option') ) { echo '<a href="tell:'.get_field('consult_tel', 'option').'" class="footer-contact">'.get_field('consult_tel', 'option').'</a>'; } */?>
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-3">
 						<div class="schedule">
-							<?php if( get_field('time_consult', 'option') ) { echo get_field('time_consult', 'option'); } ?> 
-							<?php if( get_field('no_consult', 'option') ) { echo '<small>'.get_field('no_consult', 'option').'</small>'; } ?>
+							<?php /*if( get_field('time_consult', 'option') ) { echo get_field('time_consult', 'option'); } */?>
+							<?php /*if( get_field('no_consult', 'option') ) { echo '<small>'.get_field('no_consult', 'option').'</small>'; } */?>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>-->
 		<div class="bottom-panel tobg">
 			<div class="container">
 				<div class="row">

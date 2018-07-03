@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext');
+
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
     color: #666;
@@ -12,7 +14,8 @@ body {
     position: relative;
     font-size: 16px;
     margin: 0;
-    font-family: "Ubuntu", sans-serif;
+    /*font-family: "Ubuntu", sans-serif;*/
+    font-family: 'PT Sans', sans-serif;
     color: #484848;
     overflow-x: hidden;
 }
@@ -50,7 +53,8 @@ ol, ul {
 h1, h2, h3, h4 {
     margin: 0;
     padding: 10px 0;
-    font-family: "Ubuntu", sans-serif;
+    /*font-family: "Ubuntu", sans-serif;*/
+    font-family: 'PT Sans', sans-serif;
     text-transform: uppercase;
     color: #484848;
 }
@@ -110,7 +114,7 @@ sub {
 .btn-new {
     border: none;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 20px;
     -webkit-border-radius: 25px;
     font-weight: 700;
     -webkit-transition: all 0.33s ease;
@@ -132,12 +136,25 @@ sub {
     background: linear-gradient(to top, #e67d05, #fd9218);
 }
 
-.slide-description .btn-new {
-    margin-top: 116px;
-}
-
 .btn-new:hover {
     color: #fff;
+}
+
+.btn-new--2 {
+    background: #fce1c3;
+    color: #212121;
+    font-size: 24px;
+    letter-spacing: 0.025em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.btn-new--2:hover {
+    color: #212121;
+}
+
+.slide-description .btn-new {
+    margin-top: 116px;
 }
 
 .btn:hover, .btn:active, .btn:focus {
@@ -751,13 +768,53 @@ input[type=search]:hover {
     position: relative;
 }
 
+
+.container .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.container .title h2 {
+    padding: 0;
+}
+
+.container .title span {
+    font-size: 40px;
+    color: #212121;
+    letter-spacing: 0.025em;
+    text-transform: none;
+}
+
 .title h2 {
     position: relative;
     text-align: center;
     padding: 20px 0;
 }
 
-.title h2:before {
+.title h2::before {
+    content: "";
+    width: 100px;
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    border-top: 10px solid #f88e14;
+    border-radius: 15px;
+    z-index: 999;
+}
+.title h2::after {
+    content: "";
+    width: 176px;
+    position: absolute;
+    bottom: -20px;
+    left: 135px;
+    border-top: 10px solid #ba571e;
+    border-radius: 15px;
+    z-index: 999;
+}
+
+
+/*.title h2:before {
     content: '';
     position: absolute;
     left: 0;
@@ -765,7 +822,7 @@ input[type=search]:hover {
     top: 45%;
     height: 1px;
     background: #c5c5c5;
-}
+}*/
 
 .title h2 span {
     display: inline-block;
@@ -795,6 +852,7 @@ input[type=search]:hover {
 /*________SECTION .info-goods-section________*/
 .info-goods-section {
     padding: 60px 0;
+    padding-bottom: 0;
 }
 
 .info-goods-section .title {
@@ -804,6 +862,10 @@ input[type=search]:hover {
 .info-goods-section p {
     margin: 0;
     padding: 5px 0;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #626262;
     /*-webkit-column-count: 2;
        -moz-column-count: 2;
             column-count: 2;
@@ -884,7 +946,7 @@ input[type=search]:hover {
 }
 
 .default-shell .view-box .inset-box {
-    border-left: solid 1px #a4a4a4;
+    /*border-left: solid 1px #a4a4a4;*/
     padding: 0 25px;
 }
 
@@ -931,6 +993,7 @@ input[type=search]:hover {
     color: #373d45;
     font-size: 20px;
     text-align: center;
+    font-weight: bold;
 }
 
 .default-shell .view-box .title-goods h3 a:hover {
@@ -957,16 +1020,16 @@ input[type=search]:hover {
 }
 
 .default-shell .view-box:last-child > .inset-box {
-    border-right: solid 1px #a4a4a4;
+    /*border-right: solid 1px #a4a4a4;*/
 }
 
 .default-shell .view-box:hover {
-    outline: solid 1px #a4a4a4;
-    padding-bottom: 0;
+    /*outline: solid 1px #a4a4a4;*/
+    /*padding-bottom: 0;*/
 }
 
 .default-shell .view-box:hover .more-inform-product {
-    display: inline-block;
+    /*display: inline-block;*/
 }
 
 .default-shell .view-box:hover > .inset-box {
@@ -1021,7 +1084,8 @@ input[type=search]:hover {
     background-color: transparent;
     padding: 0;
     font-weight: 400;
-    font-family: "Ubuntu", sans-serif;
+    /*font-family: "Ubuntu", sans-serif;*/
+    font-family: 'PT Sans', sans-serif;
 }
 
 .advantages-section .item {
@@ -2135,7 +2199,8 @@ input[type=search]:hover {
 
 .slabs-table {
     text-transform: uppercase;
-    font-family: "Ubuntu", sans-serif;
+    /*font-family: "Ubuntu", sans-serif;*/
+    font-family: 'PT Sans', sans-serif;
     color: #505050;
 }
 
@@ -2200,14 +2265,16 @@ input[type=search]:hover {
 .tab-fx h3 {
     display: inline-block;
     text-transform: uppercase;
-    font-family: "Ubuntu", sans-serif;
+    /*font-family: "Ubuntu", sans-serif;*/
+    font-family: 'PT Sans', sans-serif;
     font-size: 20px;
     color: #505050;
     padding-top: 0;
 }
 
 .tab-fx .goods-available {
-    font-family: "Ubuntu", sans-serif;
+    /*font-family: "Ubuntu", sans-serif;*/
+    font-family: 'PT Sans', sans-serif;
     font-size: 20px;
     color: #505050;
     margin-left: 51px;
@@ -2392,3 +2459,128 @@ input[type=search]:hover {
     top: 0;
 }
 
+
+.slider-version-2 .slick-next, .slider-version-2 .slick-prev {
+    top: 33%;
+    height: 90px;
+}
+
+.slider-version-2 .slick-prev:before, .slider-version-2 .slick-next:before {
+    height: 90px;
+}
+
+.slider-version-2 .slick-next {
+    right: -30px;
+}
+
+.slider-version-2 .slick-prev {
+    left: -30px;
+}
+
+.slider-version-2 .default-shell .view-box {
+    padding-bottom: 0;
+}
+
+.banner {
+    margin-bottom: 30px;
+}
+
+.our-projects-section .default-shell .view-box .title-goods h3 {
+    text-align: left;
+    line-height: 22px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.our-projects-section .default-shell .view-box .title-goods h3:before {
+    content: "";
+    width: 9px;
+    height: 47px;
+    position: absolute;
+    left: 0;
+    border-left: 9px solid #fd9218;
+    border-radius: 15px;
+    z-index: 999;
+}
+
+.our-projects-section .default-shell .view-box .title-goods h3 a {
+    font-size: 20px;
+    color: #484848;
+}
+
+.tile-goods-desc {
+    font-size: 16px;
+    color: #626262;
+    letter-spacing: 0.025em;
+    text-align: left;
+}
+
+.advantages-new {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 60px;
+}
+
+.advantages-new-item {
+    /*margin-right: 20px;*/
+    width: 23%;
+}
+
+/*
+.advantages-new-item:last-child {
+    margin-right: 0;
+}
+*/
+
+.advantages-new-img-wrap {
+    height: 127px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advantages-new-title {
+    font-size: 22px;
+    line-height: 26px;
+    color: #484848;
+    letter-spacing: 0.025em;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 15px;
+    min-height: 75px;
+}
+
+.advantages-new-title::after {
+    content: "";
+    width: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-top: 7px solid #f88e14;
+    border-radius: 15px;
+    z-index: 999;
+}
+
+.advantages-new-desc {
+    text-align: justify;
+    font-size: 16px;
+    color: #626262;
+    letter-spacing: 0.025em;
+}
+
+.about-company-desc {
+    margin-top: 60px;
+    padding-left: 20px;
+}
+
+.about-company-desc p {
+    font-size: 18px;
+    line-height: 22px;
+    color: #626262;
+    letter-spacing: 0.025em;
+}

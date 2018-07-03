@@ -9,8 +9,35 @@ $(document).ready(function() {
 		slidesToShow: 1,
 		adaptiveHeight: true,
 		speed:1700,
-	  autoplay:false
+	  autoplay:true
 	});
+
+    $("#slider-main-page-2").slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 4,
+        adaptiveHeight: true,
+        speed:700,
+        autoplay:false
+    });
+
+    $("#slider-main-page-3").slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 4,
+        adaptiveHeight: true,
+        speed:700,
+        autoplay:false
+    });
+
+    $("#slider-main-page-4").slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 4,
+        adaptiveHeight: true,
+        speed:700,
+        autoplay:false
+    });
 
 	if(window.matchMedia('(min-width: 768px)').matches){
     $('.default-shell .inset-box').matchHeight();
