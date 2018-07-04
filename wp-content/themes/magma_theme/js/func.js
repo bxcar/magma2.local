@@ -18,7 +18,30 @@ $(document).ready(function() {
         slidesToShow: 4,
         adaptiveHeight: true,
         speed:700,
-        autoplay:false
+        autoplay:false,
+        responsive: [
+            {
+                breakpoint: 1080,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 840,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
     });
 
     $("#slider-main-page-3").slick({
@@ -27,7 +50,27 @@ $(document).ready(function() {
         slidesToShow: 4,
         adaptiveHeight: true,
         speed:700,
-        autoplay:false
+        autoplay:false,
+        responsive: [
+            {
+                breakpoint: 1080,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 840,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     $("#slider-main-page-4").slick({
@@ -36,7 +79,27 @@ $(document).ready(function() {
         slidesToShow: 4,
         adaptiveHeight: true,
         speed:700,
-        autoplay:false
+        autoplay:false,
+        responsive: [
+            {
+                breakpoint: 1080,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 840,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
 	if(window.matchMedia('(min-width: 768px)').matches){

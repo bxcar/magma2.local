@@ -17,41 +17,68 @@
 		</div>-->
 		<div class="bottom-panel tobg">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3">
-						<div class="logo-footer">
-							<a href="<?php echo home_url('/'); ?>">
-								<?php if( get_field('footer_logo', 'option') ) { 
-									echo'<img src="'.get_field('footer_logo', 'option').'" alt="">';
-								} else {
-									echo'<img src="'.get_template_directory_uri().'/img/logo-footer.png" alt="">';
-								} ?>
-							</a>
-						</div>
+				<div class="row flex-row">
+					<div class="footer-logo">
+                        <div class="logo">
+                            <a href="<?php echo home_url('/'); ?>">
+                                <?php if( get_field('footer_logo', 'option') ) {
+                                    echo '<img src="'.get_field('footer_logo', 'option').'" alt="">';
+                                } else {
+                                    echo '<img src="'.get_template_directory_uri().'/img/footer-logo.png" alt="">';
+                                } ?>
+                            </a>
+                            <span class="logo-text">Изделия из натурального и кварцевого камня</span>
+                        </div>
+                        <div class="networks">
+                            <?php if( get_field('facebook', 'option') ) { echo '<a href="'.get_field('facebook', 'option').'" target="_blank"><img src="'.get_template_directory_uri().'/img/fb-light.png" alt=""></a>'; } ?>
+                            <?php if( get_field('vkontakte', 'option') ) { echo '<a href="'.get_field('vkontakte', 'option').'" target="_blank"><img src="'.get_template_directory_uri().'/img/vk-light.png" alt=""></a>'; } ?>
+                            <?php if( get_field('instagram', 'option') ) { echo '<a href="'.get_field('instagram', 'option').'" target="_blank"><img src="'.get_template_directory_uri().'/img/in-light.png" alt=""></a>'; } ?>
+                        </div>
 					</div>
-					<div class="col-lg-6 col-md-5 col-sm-5">
-						<nav class="menu-footer">
-							<?php
-								wp_nav_menu( array(
-								'theme_location'  => 'footer',
-								'menu'            => 'footer', 
-								'container'       => false, 
-								'menu_class'      => '', 
-								'fallback_cb'     => '__return_empty_string',
-								'depth'           => 1,
-							  ) );
-							?>
-						</nav>
-					</div>
-					<div class="col-lg-3 col-md-4 col-sm-4">
-						<div class="order-call-item">
-							<div class="networks">
-								<?php if( get_field('facebook', 'option') ) { echo '<a href="'.get_field('facebook', 'option').'" target="_blank"><img src="'.get_template_directory_uri().'/img/fb-light.png" alt=""></a>'; } ?>
-								<?php if( get_field('vkontakte', 'option') ) { echo '<a href="'.get_field('vkontakte', 'option').'" target="_blank"><img src="'.get_template_directory_uri().'/img/vk-light.png" alt=""></a>'; } ?>
-								<?php if( get_field('instagram', 'option') ) { echo '<a href="'.get_field('instagram', 'option').'" target="_blank"><img src="'.get_template_directory_uri().'/img/in-light.png" alt=""></a>'; } ?>
-							</div>
-							<a href="#feedback" data-target="#feedback" class="btn show_popup" style="color: #fff;">обратный звонок</a>
-						</div>
+                    <div class="footer-address-wrap">
+                        <div class="footer-address">
+                            <img src="<?= get_template_directory_uri()?>/img/footer-location.png">
+                            <span>г. Москва, ул. Генерала<br>Дорохова, дом 10А</span>
+                        </div>
+                        <div class="footer-phone">
+                            <img src="<?= get_template_directory_uri()?>/img/footer-phone.png">
+                            <span>8 (495) 226-28-73</span>
+                        </div>
+                        <div class="order-call-item">
+                            <a href="#feedback" data-target="#feedback" class="btn-new show_popup" style="color: #fff;">Заказать звонок</a>
+                        </div>
+                    </div>
+					<div class="footer-menu">
+                        <?php
+                        wp_nav_menu( array(
+                            'theme_location'  => 'footer-1',
+//                            'menu'            => 'footer',
+//                            'container'       => false,
+                            'menu_class'      => '',
+                            'fallback_cb'     => '__return_empty_string',
+                            'depth'           => 1,
+                        ) );
+                        ?>
+                        <?php
+                        wp_nav_menu( array(
+                            'theme_location'  => 'footer-2',
+//                            'menu'            => 'footer',
+//                            'container'       => false,
+                            'menu_class'      => '',
+                            'fallback_cb'     => '__return_empty_string',
+                            'depth'           => 1,
+                        ) );
+                        ?>
+                        <?php
+                        wp_nav_menu( array(
+                            'theme_location'  => 'footer-3',
+//                            'menu'            => 'footer',
+//                            'container'       => false,
+                            'menu_class'      => '',
+                            'fallback_cb'     => '__return_empty_string',
+                            'depth'           => 1,
+                        ) );
+                        ?>
 					</div>
 				</div>
 			</div>
