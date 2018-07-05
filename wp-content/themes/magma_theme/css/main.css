@@ -308,13 +308,15 @@ textarea::-webkit-input-placeholder {
 .pagination li a {
     color: #848383;
     font-size: 16px;
-    padding: 6px 8px;
+    padding: 6px 12px;
     display: inline-block;
 }
 
 .pagination li a:active, .pagination li a.active, .pagination li a:hover, .pagination li a:focus {
-    background: #eaa855;
-    color: #fff;
+    background: #eeb245;
+    color: #000;
+    font-weight: bold;
+    border-radius: 50%;
 }
 
 .pagination li .disabled {
@@ -1206,7 +1208,7 @@ input[type=search]:hover {
     text-align: center;
 }
 
-.title-section h2, .title-section h1 {
+.title-section h2, .title-section h1, .catalog-title {
     padding-top: 0;
     padding-bottom: 0;
 
@@ -1219,7 +1221,8 @@ input[type=search]:hover {
 }
 
 .title-section h2::before,
-.title-section h1::before {
+.title-section h1::before,
+.catalog-title::before {
     content: "";
     width: 100px;
     position: absolute;
@@ -1231,7 +1234,8 @@ input[type=search]:hover {
 }
 
 .title-section h2::after,
-.title-section h1::after {
+.title-section h1::after,
+.catalog-title::after {
     content: "";
     width: 176px;
     position: absolute;
@@ -1460,8 +1464,8 @@ input[type=search]:hover {
 }
 
 .catalog-section .filter-goods {
-    background: #f2f2f3;
-    padding: 15px 25px 30px 25px;
+    /*background: #f3e7e1;*/
+    padding: 15px 0 30px 0;
     width: 285px;
     margin-bottom: 20px;
     margin-top: 13px;
@@ -1481,7 +1485,10 @@ input[type=search]:hover {
 
 .catalog-section .filter-goods h4 {
     font-size: 18px;
-    font-weight: 100;
+    /*font-weight: 100;*/
+    text-transform: none;
+    color: #050505;
+    font-weight: bold;
 }
 
 .catalog-section .filter-goods .list-category h4 {
@@ -1528,9 +1535,11 @@ input[type=search]:hover {
 
 .catalog-section .filter-goods .list-category li a {
     display: inline-block;
-    color: #373d45;
+    /*color: #373d45;*/
     font-size: 16px;
     padding: 10px 0;
+    color: #050505;
+    font-weight: bold;
 }
 
 .catalog-section .filter-goods .list-category li a:hover, .catalog-section .filter-goods .list-category li a:active, .catalog-section .filter-goods .list-category li a:focus {
@@ -1551,12 +1560,16 @@ input[type=search]:hover {
 }
 
 .catalog-section .filter-goods .item {
-    padding-top: 20px;
+    /*padding-top: 20px;*/
+    margin-bottom: 14px;
+    background: #f3e7e1;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .catalog-section .filter-goods .color-goods .shell-color {
     font-size: 0;
-    width: 155px;
+    width: 175px;
     margin-top: 10px;
 }
 
@@ -1565,11 +1578,11 @@ input[type=search]:hover {
     height: 25px;
     border: solid 2px #fff;
     -webkit-border-radius: 2px;
-    border-radius: 2px;
     display: inline-block;
     background: #f5f5dc;
     margin-right: 10px;
     margin-bottom: 6px;
+    border-radius: 50%;
 }
 
 .catalog-section .filter-goods .btn {
@@ -1589,6 +1602,7 @@ input[type=search]:hover {
     width: 240px;
     position: relative;
     cursor: pointer;
+    z-index: 1;
 }
 
 .select-group:before {
@@ -1598,7 +1612,8 @@ input[type=search]:hover {
     top: 15px;
     border: 7px solid transparent;
     border-top: 12px solid #373d45;
-    background: #f2f2f3;
+    background: transparent;
+    z-index: 10000;
 }
 
 .select-group select {
@@ -1611,8 +1626,10 @@ input[type=search]:hover {
     border-radius: 25px;
     z-index: 9999;
     position: relative;
-    background: transparent;
+    /*background: transparent;*/
     cursor: pointer;
+    background-color: #fff;
+    /*z-index: -1;*/
 }
 
 /*________PROJECT________*/
@@ -2220,12 +2237,12 @@ input[type=search]:hover {
 }
 
 .alphabet-list {
-    text-align: center;
+    text-align: left;
 }
 
 .alphabet-list a {
-    color: #373d45;
-    padding: 3px 5px;
+    color: #050505;
+    padding: 3px 2px;
     line-height: 25px;
 }
 
@@ -2723,6 +2740,19 @@ footer .flex-row {
 
 .single-top-img {
     vertical-align: top;
+}
+
+
+.catalog-section .filter-goods .item {
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+
+.catalog-section .filter-goods .bg-orange.btn-filter {
+    background: #fc9117;
+    width: 90%;
+    text-transform: none;
+    font-size: 20px;
 }
 
 @media (max-width: 1199px) {

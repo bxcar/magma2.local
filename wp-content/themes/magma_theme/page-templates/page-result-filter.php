@@ -4,7 +4,7 @@
 	*/
 	get_header();
 ?>
-
+    <img class="single-top-img" src="<?= get_template_directory_uri(); ?>/img/single-top-img.png">
 
 
 
@@ -19,10 +19,10 @@
 
 
 
-
 	<!--.catalog-section-->
 	<section class="catalog-section">
 		<div class="container">
+            <h1 class="catalog-title">Каталог камня</h1>
 	<!--		<div class="title-section"><h2>Каталог</h2></div> -->
 
 
@@ -44,9 +44,8 @@
 
 						<?php if( get_field('page_filter', 'option') ) { ?>
 							<form action="<?php echo get_field('page_filter', 'option'); ?>" id="filter_form" method="GET">
-								<div class="item">
+								<div class="item item-category">
 									<div class="list-category" id="prod_category1">
-										<h4>Каталог камня</h4>
 										<?php
 										if ($_GET['cat_filter'] != '') {
 											$thisCat = get_category($_GET['cat_filter'],false);
@@ -182,7 +181,7 @@
 									if( $fact ){
 								?>
 									<div class="item type-facture">
-										<h4>ТИП фактуры</h4>
+										<h4>Тип фактуры</h4>
 										<div class="select-group">
 											<select name="facture_filter" id="facture_filter" class="each_filter">
 												<option>Выбрать фактуру</option>
@@ -212,7 +211,7 @@
 									if( $type ){
 								?>
 									<div class="item">
-										<h4>материал</h4>
+										<h4>Материал</h4>
 										<ul class="list-category" id="material_select">
 											<?php 
 											$mat_f = $_GET['material_filter'];
@@ -234,7 +233,7 @@
 								<?php if( get_field('page_catalog', 'option') ) { 
 									$local = get_field('page_catalog', 'option'); 
 								} ?>
-								<input type="reset" class="btn bg-orange" id="reset_filter" data-local="<?php echo $local; ?>" value="СБРОСИТЬ ФИЛЬТР">						
+								<input type="reset" class="btn-new btn-filter bg-orange" id="reset_filter" data-local="<?php echo $local; ?>" value="Сбросить фильтр">
 
 							</form>
 						<?php } else {
