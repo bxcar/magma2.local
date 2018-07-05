@@ -332,11 +332,13 @@ textarea::-webkit-input-placeholder {
 }
 
 .breadcrumb-section .breadcrumb span {
-    color: #e59c44;
+    /*color: #e59c44;*/
+    color: #626262;
 }
 
 .breadcrumb-section .breadcrumb a {
-    color: #373d45;
+    /*color: #373d45;*/
+    color: #626262;
 }
 
 .breadcrumb-section .breadcrumb a:hover {
@@ -489,6 +491,14 @@ textarea::-webkit-input-placeholder {
     padding-left: 0;
     margin-left: 27px;
 }
+
+.header .bottom-panel .menu-top .sub-menu li {
+    margin-left: 0;
+}
+
+/*.header .bottom-panel .menu-top > ul > li {
+    margin-left: 27px;
+}*/
 
 .header .bottom-panel .menu-top li:first-child {
     padding-left: 0;
@@ -1198,7 +1208,38 @@ input[type=search]:hover {
 
 .title-section h2, .title-section h1 {
     padding-top: 0;
-    padding-bottom: 10px;
+    padding-bottom: 0;
+
+    font-size: 40px;
+    color: #212121;
+    letter-spacing: 0.025em;
+    text-transform: none;
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.title-section h2::before,
+.title-section h1::before {
+    content: "";
+    width: 100px;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    border-top: 10px solid #f88e14;
+    border-radius: 15px;
+    z-index: 999;
+}
+
+.title-section h2::after,
+.title-section h1::after {
+    content: "";
+    width: 176px;
+    position: absolute;
+    bottom: -20px;
+    left: 115px;
+    border-top: 10px solid #ba571e;
+    border-radius: 15px;
+    z-index: 999;
 }
 
 /****.panel-list-goods****/
@@ -2278,6 +2319,7 @@ input[type=search]:hover {
     font-size: 20px;
     color: #505050;
     padding-top: 0;
+    font-weight: bold;
 }
 
 .tab-fx .goods-available {
@@ -2343,9 +2385,10 @@ input[type=search]:hover {
 }
 
 .description-goods .text {
-    height: 233px;
+    height: 223px;
     overflow: auto;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 12px;
 }
 
 /*.description-goods .text::-webkit-scrollbar {
@@ -2678,6 +2721,10 @@ footer .flex-row {
     border-left: none!important;
 }
 
+.single-top-img {
+    vertical-align: top;
+}
+
 @media (max-width: 1199px) {
     .header .bottom-panel .menu-top li {
         margin-left: 4px;
@@ -2699,6 +2746,10 @@ footer .flex-row {
 @media (max-width: 991px) {
     .header .bottom-panel {
         padding-bottom: 0 !important;
+    }
+
+    .header .bottom-panel .menu-top li {
+        margin-left: 0;
     }
 }
 
