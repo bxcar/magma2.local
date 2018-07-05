@@ -97,7 +97,7 @@
                         </div><!--End .item-->
 
                         <!--.item-->
-                        <div class="item">
+                        <div class="item header-phones-wrap">
                             <div class="item-header-phones">
                                 <img src="<?= get_template_directory_uri(); ?>/img/header_phone.png">
                                 <div class="header-phones">
