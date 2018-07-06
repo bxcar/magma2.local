@@ -2774,9 +2774,69 @@ footer .flex-row {
     padding-left: 35px;
 }
 
+.contact-section.portfolio-page {
+    padding-bottom: 165px;
+}
+
+.img-with-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 50px;
+}
+
+.img-with-desc img {
+    max-width: 702px;
+    margin-right: 60px;
+}
+
+.img-with-desc .desc-title {
+    text-align: left;
+    line-height: 26px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.img-with-desc .desc-title a {
+    font-size: 24px;
+    color: #484848;
+    font-weight: bold;
+}
+
+.img-with-desc .desc p {
+    font-size: 16px;
+    color: #626262;
+    letter-spacing: 0.025em;
+    text-align: left;
+}
+
+.img-with-desc .desc-title::before {
+    content: "";
+    width: 9px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    border-left: 9px solid #fd9218;
+    border-radius: 15px;
+    z-index: 999;
+}
+
 @media (max-width: 1199px) {
     .header .bottom-panel .menu-top li {
         margin-left: 4px;
+    }
+
+    .img-with-desc {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-with-desc img {
+        margin-bottom: 30px;
+        max-width: 100%;
+        margin-right: 0;
     }
 
     .footer-logo,
