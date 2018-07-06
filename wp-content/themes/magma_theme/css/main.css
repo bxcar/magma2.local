@@ -1517,6 +1517,7 @@ input[type=search]:hover {
 .catalog-section .filter-goods .list-category .selected_cat a {
     position: relative;
     padding-right: 35px;
+    margin-bottom: 0;
 }
 
 .catalog-section .filter-goods .list-category .selected_cat a:after {
@@ -2352,6 +2353,7 @@ input[type=search]:hover {
     display: flex;
     /*justify-content: space-between;*/
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .tab-fx-pic-container img {
@@ -2432,6 +2434,7 @@ input[type=search]:hover {
 
 .tab-fx-pic-container .pic {
     margin-right: 9px;
+    margin-bottom: 10px;
 }
 
 .slabs-table {
@@ -2748,11 +2751,27 @@ footer .flex-row {
     padding-top: 10px;
 }
 
+.catalog-section .filter-goods .item-selected-cat {
+    padding-bottom: 10px;
+}
+
 .catalog-section .filter-goods .bg-orange.btn-filter {
     background: #fc9117;
     width: 90%;
     text-transform: none;
     font-size: 20px;
+}
+
+.services-page .our-projects-section {
+    padding-bottom: 0;
+}
+
+.services-page .default-shell {
+    padding-bottom: 10px;
+}
+
+.breadcrumb-services .container {
+    padding-left: 35px;
 }
 
 @media (max-width: 1199px) {

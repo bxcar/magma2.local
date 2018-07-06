@@ -6,6 +6,7 @@
 	$_GET['cat_filter'] = get_the_category()[0]->cat_ID;
 	// echo "cat_cat = ".$_GET['cat_filter'].get_the_category()[0]->cat_ID;
 ?>
+    <img class="single-top-img" src="<?= get_template_directory_uri(); ?>/img/single-top-img.png">
 
 
 
@@ -25,6 +26,7 @@
 	<!--.catalog-section-->
 	<section class="catalog-section">
 		<div class="container">
+            <h1 class="catalog-title">Каталог камня</h1>
 	<!--		<div class="title-section"><h2>Каталог</h2></div> -->
 
 
@@ -46,9 +48,9 @@
 
 						<?php if( get_field('page_filter', 'option') ) { ?>
 							<form action="<?php /*echo get_field('page_filter', 'option');*/ echo get_category_link($_GET['cat_filter']); ?>" id="filter_form" method="GET">
-								<div class="item">
+								<div class="item item-selected-cat">
 									<div class="list-category" id="prod_category">
-										<h4>Каталог камня</h4>
+<!--										<h4>Каталог камня</h4>-->
 										<?php
 										if ($_GET['cat_filter'] != '') {
 											$thisCat = get_category($_GET['cat_filter'],false);
@@ -235,7 +237,7 @@
 								<?php if( get_field('page_catalog', 'option') ) { 
 									$local = get_field('page_catalog', 'option'); 
 								} ?>
-								<input type="reset" class="btn bg-orange" id="reset_filter" data-local="<?php echo $local; ?>" value="СБРОСИТЬ ФИЛЬТР">						
+								<input type="reset" class="btn-new btn-filter bg-orange" id="reset_filter" data-local="<?php echo $local; ?>" value="Сбросить фильтр">
 
 							</form>
 						<?php } else {

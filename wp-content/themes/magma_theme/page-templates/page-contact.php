@@ -4,7 +4,7 @@
 	*/
 	get_header();
 ?>
-
+<img class="single-top-img" src="<?= get_template_directory_uri(); ?>/img/single-top-img.png">
 
 
 
